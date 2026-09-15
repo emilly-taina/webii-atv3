@@ -20,11 +20,7 @@ A API permite o gerenciamento de:
 Também foram desenvolvidas rotas para consulta dos dados e validação do funcionamento da aplicação através do Bruno, realizando testes das requisições HTTP.
 
 ## Como executar o projeto
-Primeiro, entrar na pasta do projeto:
 
-```bash
-cd webii-atv3
-```
 Instalar dependências
 ```bash
 npm install
