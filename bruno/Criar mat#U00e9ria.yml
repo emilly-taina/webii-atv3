@@ -1,0 +1,23 @@
+info:
+  name: Criar matéria
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:3000/subjects
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Programação Web3",
+        "professorId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

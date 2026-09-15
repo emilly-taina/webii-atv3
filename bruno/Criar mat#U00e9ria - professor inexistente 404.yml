@@ -1,0 +1,23 @@
+info:
+  name: Criar matéria - professor inexistente 404
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://localhost:3000/subjects
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Matemática",
+        "professorId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

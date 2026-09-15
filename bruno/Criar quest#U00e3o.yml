@@ -1,0 +1,26 @@
+info:
+  name: "Criar questão "
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://localhost:3000/questions
+  body:
+    type: json
+    data: |-
+      {
+        "enunciado": "Qual a função do HTML?",
+        "respostaCorreta": "Criar estrutura de páginas web",
+        "dificuldade": 1,
+        "disciplinaId": 1,
+        "autorId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

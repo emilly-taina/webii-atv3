@@ -1,0 +1,5 @@
+CREATE TABLE "subjects" ("id" SERIAL PRIMARY KEY,"nome" TEXT NOT NULL,"ativa" BOOLEAN NOT NULL DEFAULT true,"professor_id" INTEGER NOT NULL,"createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,"updatedAt" TIMESTAMP(3) NOT NULL);
+CREATE TABLE "questions" ("id" SERIAL PRIMARY KEY,"enunciado" TEXT NOT NULL,"dificuldade" INTEGER NOT NULL,"resposta_correta" TEXT,"disciplina_id" INTEGER NOT NULL,"autor_id" INTEGER NOT NULL,"ativa" BOOLEAN NOT NULL DEFAULT true,"createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,"updatedAt" TIMESTAMP(3) NOT NULL);
+ALTER TABLE "subjects" ADD CONSTRAINT "subjects_professor_id_fkey" FOREIGN KEY ("professor_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "questions" ADD CONSTRAINT "questions_disciplina_id_fkey" FOREIGN KEY ("disciplina_id") REFERENCES "subjects"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "questions" ADD CONSTRAINT "questions_autor_id_fkey" FOREIGN KEY ("autor_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

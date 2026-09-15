@@ -1,0 +1,22 @@
+info:
+  name: Atualizar questão
+  type: http
+  seq: 32
+
+http:
+  method: GET
+  url: http://localhost:3000/questions/1
+  body:
+    type: json
+    data: |
+      {
+        "enunciado":"O que é uma chave primária em banco de dados?"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
